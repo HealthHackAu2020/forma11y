@@ -4,7 +4,12 @@ Decrease barriers for blind and vision impaired people in medical practices.
 ## Requirments
 - Node
 - Ionic (Angular)
-- Deployed by netlify...maybe?
+
+## Get started
+- clone
+- npm ci
+- npx ionic serve
+
 
 ## Must have
 - Web forms

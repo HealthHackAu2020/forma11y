@@ -9,7 +9,7 @@ export class ValidationService {
     validatorValue?: any,
   ): string {
     const config = {
-      required: `This ${fieldName} is required`,
+      required: `${fieldName} is required`,
       invalidEmailAddress: "Please enter a valid email address",
       invalidPassword:
         "Please enter a valid password. Password must be at least 6 characters long, and contain a number.",

@@ -6,7 +6,7 @@ import { ValidationService } from "src/app/validation.service";
   selector: "validation-error",
   template: `
     <ion-item *ngIf="errorMessage !== null" class="validation-error">
-      <span class="label"><ion-icon name="warning-outline"></ion-icon>&nbsp;{{ errorMessage }}</span>
+      <span class="label" role=alert tabindex="0"><ion-icon name="warning-outline" aria-hidden="true"></ion-icon>&nbsp;{{ errorMessage }}</span>
     </ion-item>
   `,
   styleUrls: ["./validation-error.component.scss"]

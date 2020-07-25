@@ -41,6 +41,20 @@
             [fieldName]="'Input 2'"
           ></validation-error>
       </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input
+              placeholder="Email"
+              type="email"
+              formControlName="email"
+            ></ion-input>
+        </ion-item>
+        <validation-error
+            [control]="dummyForm.controls.email"
+            [fieldName]="'Email'"
+          ></validation-error>
+      </ion-col>
     </ion-row>
   </form>
   <form>

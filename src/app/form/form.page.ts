@@ -15,6 +15,7 @@ export class FormPage implements OnInit {
     this.dummyForm = this.formBuilder.group({
       input1: ['', ValidationService.isRequired],
       input2: ['', ValidationService.isRequired],
+      email: ['', [ValidationService.isRequired, ValidationService.isEmailValid]],
     });
   }
 

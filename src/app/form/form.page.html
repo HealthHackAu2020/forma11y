@@ -1,0 +1,172 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="dummyForm">
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-item>
+          <ion-label position="stacked">Input 1</ion-label>
+          <ion-input
+              placeholder="Placeholder"
+              type="text"
+              formControlName="input1"
+              #firstInput
+            ></ion-input>
+        </ion-item>
+        <validation-error
+            [control]="dummyForm.controls.input1"
+            [fieldName]="'Input 1'"
+          ></validation-error>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-item>
+          <ion-label position="stacked">Input 2</ion-label>
+          <ion-input
+              placeholder="Placeholder"
+              type="text"
+              formControlName="input2"
+            ></ion-input>
+        </ion-item>
+        <validation-error
+            [control]="dummyForm.controls.input2"
+            [fieldName]="'Input 2'"
+          ></validation-error>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input
+              placeholder="Email"
+              type="email"
+              formControlName="email"
+            ></ion-input>
+        </ion-item>
+        <validation-error
+            [control]="dummyForm.controls.email"
+            [fieldName]="'Email'"
+          ></validation-error>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form>
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-item>
+          <ion-label position="stacked">Input Text</ion-label>
+          <ion-input placeholder="Placeholder" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Input Number</ion-label>
+          <ion-input
+              placeholder="Placeholder"
+              type="number"
+              value="444"
+            ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Input Email</ion-label>
+          <ion-input placeholder="Placeholder" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Input Password</ion-label>
+          <ion-input placeholder="Placeholder" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Input Tel</ion-label>
+          <ion-input placeholder="Placeholder" type="tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Textarea Label</ion-label>
+          <ion-textarea placeholder="Placeholder"></ion-textarea>
+        </ion-item>
+        <ion-searchbar></ion-searchbar>
+        <ion-item>
+          <ion-label
+              >Checkbox Label&nbsp;<fa-icon
+                [icon]="['fas', 'info-circle']"
+              ></fa-icon
+            >
+          </ion-label>
+          <ion-checkbox slot="end"></ion-checkbox>
+        </ion-item>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>Radio</ion-label>
+          </ion-list-header>
+
+          <ion-item>
+            <ion-label>Earth</ion-label>
+            <ion-radio slot="end" value="biff" checked></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Wind</ion-label>
+            <ion-radio slot="end" value="griff"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Fire</ion-label>
+            <ion-radio slot="end" value="buford"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <!--  -->
+        <ion-list-header>Selects</ion-list-header>
+
+        <ion-item>
+          <ion-label>Alert</ion-label>
+          <ion-select
+              interface="alert"
+              multiple="true"
+              placeholder="Select Multiple"
+            >
+            <ion-select-option value="bacon">Bacon</ion-select-option>
+            <ion-select-option value="olives">Black Olives</ion-select-option>
+            <ion-select-option value="xcheese"
+                >Extra Cheese</ion-select-option
+              >
+            <ion-select-option value="peppers"
+                >Green Peppers</ion-select-option
+              >
+            <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
+            <ion-select-option value="onions">Onions</ion-select-option>
+            <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+            <ion-select-option value="pineapple">Pineapple</ion-select-option>
+            <ion-select-option value="sausage">Sausage</ion-select-option>
+            <ion-select-option value="Spinach">Spinach</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Popover</ion-label>
+          <ion-select interface="popover" placeholder="Select One">
+            <ion-select-option value="brown">Brown</ion-select-option>
+            <ion-select-option value="blonde">Blonde</ion-select-option>
+            <ion-select-option value="black">Black</ion-select-option>
+            <ion-select-option value="red">Red</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Action Sheet</ion-label>
+          <ion-select interface="action-sheet" placeholder="Select One">
+            <ion-select-option value="red">Red</ion-select-option>
+            <ion-select-option value="purple">Purple</ion-select-option>
+            <ion-select-option value="yellow">Yellow</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+            <ion-select-option value="green">Green</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <!--  -->
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

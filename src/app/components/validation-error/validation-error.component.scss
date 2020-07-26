@@ -1,0 +1,14 @@
+
+ion-item.validation-error {
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    --inner-padding-start: 0px;
+
+  span.label {
+    color: var(--ion-color-danger);
+    ion-icon {
+      vertical-align: middle;
+    }
+  }
+}

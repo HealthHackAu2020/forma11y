@@ -11,3 +11,5 @@ Decrease barriers for blind and vision impaired people in medical practices.
 (Netlfiy a11y plugin)[https://docs.netlify.com/configure-builds/build-plugins/#ui-installation]
 (Do’s and Don’ts)[https://github.com/UKHomeOffice/posters/blob/master/accessibility/dos-donts/posters_en-UK/accessibility-posters-set.pdf]
 (WebAIM Contrast Checker)[https://webaim.org/resources/contrastchecker/]
+(Accessible Color Generator)[https://learnui.design/tools/accessible-color-generator.html]
+(Article a11y Dyslexia)[https://uxdesign.cc/web-accessibility-for-people-with-dyslexia-emerging-research-1129129596d3]

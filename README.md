@@ -26,6 +26,10 @@ npm ci
 ``` 
 npx ionic serve
 ```
+### Helpful VSCODE extenstions
+- [Ionic Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-ionic-snippets)
+- [Ionic Blog 2019 ~ 10 Awesome VS Code Extensions](https://ionicframework.com/blog/10-awesome-vs-code-extensions/)
+
 
 ### Project Thoughts
 ## Must have

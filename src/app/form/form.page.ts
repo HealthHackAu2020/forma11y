@@ -19,8 +19,12 @@ export class FormPage implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onToggleDarkMode(event: CustomEvent): void {
+    const isChecked: boolean = event.detail.checked;
+    return isChecked
+      ? document.body.setAttribute('color-theme', 'dark')
+      : document.body.setAttribute('color-theme', 'light');
   }
-
-
 }

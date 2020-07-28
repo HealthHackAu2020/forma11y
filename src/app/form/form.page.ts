@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../validation.service';
+import { PopoverController } from '@ionic/angular';
+import { AccessibilityFeaturesComponent } from '../components/accessibility-features/accessibility-features.component';
+import { DarkModeService } from '../dark-mode.service';
 
 @Component({
   selector: 'app-form',
@@ -10,8 +13,8 @@ import { ValidationService } from '../validation.service';
 export class FormPage implements OnInit {
   title: string = 'Form Elements';
   dummyForm: FormGroup;
-
-  constructor(public formBuilder: FormBuilder) {
+  isDarkMode: boolean;
+  constructor(public formBuilder: FormBuilder, private popoverController: PopoverController, private darkModeService: DarkModeService) {
     this.dummyForm = this.formBuilder.group({
       input1: ['', ValidationService.isRequired],
       input2: ['', ValidationService.isRequired],
@@ -20,6 +23,15 @@ export class FormPage implements OnInit {
   }
 
   ngOnInit() {
+    this.isDarkMode = this.darkModeService.get()
+  }
+
+  async showA11yFeatures(event: any) {
+    const popover = await this.popoverController.create({
+      component: AccessibilityFeaturesComponent,
+      event
+    })
+    return await popover.present();  
   }
 
 

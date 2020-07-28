@@ -15,13 +15,27 @@ git clone git@github.com:HealthHackAu2020/forma11y.git
 ```
 cd forma11y
 ```
-3. run npm install
+1. run npm install [npm ci vs npm install](https://medium.com/better-programming/npm-ci-vs-npm-install-which-should-you-use-in-your-node-js-projects-51e07cb71e26)
 ```
-npm install
+npm ci
+
 ```
-4. serve the project
+4a. serve the project [npx vs npm](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/)
 ``` 
-ionic serve
+npx ionic serve
+```
+4b. serve the project: show iOS and Android (npx ionic serve --l)
+```
+npx ionic serve --l
+```
+
+## Helpful commands
+
+- Ionic Repair Fixes
+  - package lock files
+  - node_modules
+``` 
+npx ionic repair
 ```
 
 ### Project Thoughts

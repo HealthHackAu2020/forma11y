@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
       icon: "document-text",
     },
     {
-      title: "Form Elements",
+      title: "Form Elements (Dev Only)",
       url: "/form",
       icon: "list",
     },

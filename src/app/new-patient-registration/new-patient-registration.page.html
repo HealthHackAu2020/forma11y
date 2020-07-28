@@ -15,62 +15,13 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="dummyForm">
-    <ion-row>
-      <ion-col size="12" size-md="4" offset-md="4">
-        <ion-item>
-          <ion-label position="stacked">Input 1</ion-label>
-          <ion-input
-            placeholder="Placeholder"
-            type="text"
-            formControlName="input1"
-            #firstInput
-          ></ion-input>
-        </ion-item>
-        <validation-error
-          [control]="dummyForm.controls.input1"
-          [fieldName]="'Input 1'"
-        ></validation-error>
-      </ion-col>
-      <ion-col size="12" size-md="4" offset-md="4">
-        <ion-item>
-          <ion-label position="stacked">Input 2</ion-label>
-          <ion-input
-            placeholder="Placeholder"
-            type="text"
-            formControlName="input2"
-          ></ion-input>
-        </ion-item>
-        <validation-error
-          [control]="dummyForm.controls.input2"
-          [fieldName]="'Input 2'"
-        ></validation-error>
-      </ion-col>
-      <ion-col size="12" size-md="4" offset-md="4">
-        <ion-item>
-          <ion-label position="stacked">Email</ion-label>
-          <ion-input
-            placeholder="Email"
-            type="email"
-            formControlName="email"
-          ></ion-input>
-        </ion-item>
-        <validation-error
-          [control]="dummyForm.controls.email"
-          [fieldName]="'Email'"
-        ></validation-error>
-      </ion-col>
-    </ion-row>
-  </form>
   <form>
     <ion-row>
-      <ion-col size="12" size-md="4" offset-md="4">
+      <ion-col size="12" size-md="8" offset-md="2">
         <ion-item>
           <ion-label position="stacked">Input Text</ion-label>
           <ion-input placeholder="Placeholder" type="text"></ion-input>
         </ion-item>
-
-        <!--Van's work-->
 
         <ion-title>Section A: Personal details</ion-title>
 

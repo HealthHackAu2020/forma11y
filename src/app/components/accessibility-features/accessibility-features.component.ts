@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AccessibilityFeaturesService } from 'src/app/accessibility-features.service';
 import { DarkModeService } from 'src/app/dark-mode.service';
 
 @Component({

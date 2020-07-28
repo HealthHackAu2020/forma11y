@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DarkModeService } from 'src/app/dark-mode.service';
+import { FontSizeService } from 'src/app/font-size.service';
 
 @Component({
   selector: 'app-accessibility-features',
@@ -8,10 +9,12 @@ import { DarkModeService } from 'src/app/dark-mode.service';
 })
 export class AccessibilityFeaturesComponent implements OnInit {
   isDarkMode: boolean;
-  constructor(private darkModeService: DarkModeService) {}
+  fontSize: number;
+  constructor(private darkModeService: DarkModeService, private fontSizeService: FontSizeService) {}
 
   ngOnInit() {
     this.isDarkMode = this.darkModeService.get();
+    this.fontSize = this.fontSizeService.get();
   }
 
   async onToggleDarkMode(event: CustomEvent): Promise<void> {
@@ -24,6 +27,11 @@ export class AccessibilityFeaturesComponent implements OnInit {
       document.body.setAttribute('color-theme', 'light');
     }
     console.info(this.isDarkMode);
+  }
+
+  async onChangeFontSize(event: any) {
+    const size = await event.detail.value;
+    this.fontSizeService.set(size);
   }
 
 }

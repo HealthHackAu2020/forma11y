@@ -3,7 +3,7 @@
     <ion-col size="12">
       <ion-item>
         <ion-label>Dark mode</ion-label>
-        <ion-toggle (ionChange)="onToggleDarkMode($event)"></ion-toggle>
+        <ion-toggle (ionChange)="onToggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
       </ion-item>
     </ion-col>
   </ion-row>

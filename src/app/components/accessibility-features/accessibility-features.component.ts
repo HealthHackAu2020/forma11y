@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AccessibilityFeaturesService } from 'src/app/accessibility-features.service';
+import { DarkModeService } from 'src/app/dark-mode.service';
 
 @Component({
   selector: 'app-accessibility-features',
@@ -7,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessibilityFeaturesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private darkModeService: DarkModeService) {}
 
   ngOnInit() {}
 
-  onToggleDarkMode(event: CustomEvent): void {
-    const isChecked: boolean = event.detail.checked;
-    return isChecked
-      ? document.body.setAttribute('color-theme', 'dark')
-      : document.body.setAttribute('color-theme', 'light');
+  async onToggleDarkMode(event: CustomEvent): Promise<void> {
+    const isChecked: boolean = await event.detail.checked;
+    if (isChecked) {
+      this.darkModeService.set(true);
+      document.body.setAttribute('color-theme', 'dark');
+    } else {
+      this.darkModeService.set(false);
+      document.body.setAttribute('color-theme', 'light');
+    }
+    console.info(this.darkModeService.get());
   }
 
 }

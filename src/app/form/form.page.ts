@@ -12,8 +12,8 @@ import { DarkModeService } from '../dark-mode.service';
 })
 export class FormPage implements OnInit {
   title: string = 'Form Elements';
-  dummyForm: FormGroup;
   isDarkMode: boolean;
+  dummyForm: FormGroup;
   constructor(public formBuilder: FormBuilder, private popoverController: PopoverController, private darkModeService: DarkModeService) {
     this.dummyForm = this.formBuilder.group({
       input1: ['', ValidationService.isRequired],

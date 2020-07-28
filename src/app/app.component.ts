@@ -18,6 +18,11 @@ export class AppComponent implements OnInit {
       icon: "home",
     },
     {
+      title: "New Patient Registration",
+      url: "/new-patient-registration",
+      icon: "document-text",
+    },
+    {
       title: "Form Elements",
       url: "/form",
       icon: "list",

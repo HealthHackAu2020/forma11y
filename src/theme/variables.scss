@@ -234,3 +234,7 @@ body[font-readable="true"] {
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
 }
+
+body[font-family="open-dyslexic"] {
+  --ion-font-family: 'OpenDyslexic';
+}

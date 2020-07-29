@@ -229,3 +229,8 @@ body[color-theme="dark"] {
   --ion-card-background: #1e1e1e;
 }
 // TODO :: Override FontSize with viewport width sizes eg `font-size: 8vw`
+
+body[font-readable="true"] {
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+}

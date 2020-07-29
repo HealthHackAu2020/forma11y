@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DarkModeService } from 'src/app/dark-mode.service';
 import { FontSizeService } from 'src/app/font-size.service';
 import { ReaderModeService } from 'src/app/reader-mode.service';
+import { FontFamilyService } from 'src/app/font-family.service';
 
 @Component({
   selector: 'app-accessibility-features',
@@ -12,12 +13,14 @@ export class AccessibilityFeaturesComponent implements OnInit {
   isDarkMode: boolean;
   fontSize: number;
   isReaderMode: boolean;
-  constructor(private darkModeService: DarkModeService, private fontSizeService: FontSizeService, private readerModeService: ReaderModeService) {}
+  fontFamily: string | null;
+  constructor(private darkModeService: DarkModeService, private fontSizeService: FontSizeService, private readerModeService: ReaderModeService, private fontFamilyService: FontFamilyService) {}
 
   ngOnInit() {
     this.isDarkMode = this.darkModeService.get();
     this.fontSize = this.fontSizeService.get();
     this.isReaderMode = this.readerModeService.get();
+    this.fontFamily = this.fontFamilyService.get();
   }
 
   async onToggleDarkMode(event: CustomEvent): Promise<void> {
@@ -47,6 +50,13 @@ export class AccessibilityFeaturesComponent implements OnInit {
       document.body.setAttribute('font-readable', 'false');
     }
     console.info(this.isReaderMode);
+  }
+
+  async onFontFamilyChange(event: CustomEvent) {
+    const fontFamily = await event.detail.value;
+    this.fontFamilyService.set(fontFamily);
+    document.body.setAttribute('font-family', fontFamily);
+    console.info(fontFamily);
   }
 
 }

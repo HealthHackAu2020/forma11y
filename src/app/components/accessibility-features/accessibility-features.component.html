@@ -1,24 +1,49 @@
-<ion-grid>
-  <ion-row>
-    <ion-col size="12">
-      <ion-item>
-        <ion-label>Dark mode</ion-label>
-        <ion-toggle (ionChange)="onToggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
-      </ion-item>
-    </ion-col>
-    <ion-col size="12">
-      <ion-item>
-        <ion-label>Reader Mode</ion-label>
-        <ion-toggle (ionChange)="onToggleReaderMode($event)" [checked]="isReaderMode"></ion-toggle>
-      </ion-item>
-    </ion-col>
-    <ion-col size="12">
-      <ion-item>
-        <ion-range min="1" max="3.5" snaps="true" step="0.5" [value]="fontSize" (ionChange)='onChangeFontSize($event)'>
-          <ion-label slot="start" [style.font-size.px]="12">A</ion-label>
-          <ion-label slot="end" [style.font-size.px]="20">A</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<ion-list>
+  <ion-item>
+    <ion-label>Dark mode</ion-label>
+    <ion-toggle
+      (ionChange)="onToggleDarkMode($event)"
+      [checked]="isDarkMode"
+    ></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Reader Mode</ion-label>
+    <ion-toggle
+      (ionChange)="onToggleReaderMode($event)"
+      [checked]="isReaderMode"
+    ></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-range
+      min="1"
+      max="3.5"
+      snaps="true"
+      step="0.5"
+      [value]="fontSize"
+      (ionChange)="onChangeFontSize($event)"
+    >
+      <ion-label slot="start" [style.font-size.px]="12">A</ion-label>
+      <ion-label slot="end" [style.font-size.px]="20">A</ion-label>
+    </ion-range>
+  </ion-item>
+</ion-list>
+<ion-list>
+  <ion-radio-group
+    [value]="fontFamily"
+    (ionChange)="onFontFamilyChange($event)"
+  >
+    <ion-list-header>
+      <ion-label>Font family</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Default</ion-label>
+      <ion-radio slot="end" value=""></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Open Dyslexic</ion-label>
+      <ion-radio slot="end" value="open-dyslexic"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>

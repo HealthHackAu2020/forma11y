@@ -28,6 +28,21 @@ npx ionic serve
 ```
 npx ionic serve --l
 ```
+5. Ensure that you can do a prod build locally
+```
+npx ionic build --prod
+```
+
+## Deployment
+[Forma11y github page](https://healthhackau2020.github.io/forma11y/)
+- Deployed via Github pages for now (all in one place)
+```
+npm run gh-pages
+```
+What this script does:
+- does prod build
+- uses gh-pages branch
+- uses the _www_ directory
 
 ## Helpful commands
 

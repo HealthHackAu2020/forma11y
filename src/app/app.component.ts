@@ -11,7 +11,7 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
-  public appPages = [
+  public patientPages = [
     {
       title: "Home",
       url: "/home",
@@ -21,9 +21,19 @@ export class AppComponent implements OnInit {
       title: "New Patient Registration",
       url: "/new-patient-registration",
       icon: "document-text",
-    },
+    }
+    
+  ];
+  public clinicPages = [
     {
-      title: "Form Elements (Dev Only)",
+      title: "Clinic",
+      url: "/clinic",
+      icon: "medkit",
+    },
+  ];
+  public devPages = [
+    {
+      title: "Form Elements",
       url: "/form",
       icon: "list",
     },

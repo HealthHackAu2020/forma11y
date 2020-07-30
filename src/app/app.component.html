@@ -1,11 +1,14 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
+    
     <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+      <ion-toolbar>
+        <ion-title>Forma11y</ion-title>
+      </ion-toolbar>
+    </ion-header>
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Forma11y</ion-list-header>
-          <!-- <ion-note>hi@forma11y.com</ion-note> -->
-
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

@@ -235,18 +235,26 @@ body[font-readable="true"] {
   word-spacing: 0.16em;
 }
 
-body[font-family="open-dyslexic"] {
+body[font-family="open-dyslexic"],
+ion-label.font-label--open-dyslexic {
   --ion-font-family: 'OpenDyslexic';
 }
 
-body[font-family="andika-new-basic"] {
+body[font-family="andika-new-basic"],
+ion-label.font-label--andika-new-basic {
   --ion-font-family: 'AndikaNewBasic';
 }
 
-body[font-family="inter"] {
+body[font-family="inter"],
+ion-label.font-label--inter {
   --ion-font-family: 'Inter';
 }
 
-body[font-family="tiresias"] {
+body[font-family="tiresias"],
+ion-label.font-label--tiresias {
   --ion-font-family: 'Tiresias';
+}
+
+ion-label.font-label--default {
+  --ion-font-family: 'Roboto';
 }

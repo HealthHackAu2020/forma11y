@@ -39,6 +39,7 @@ export class FormPage implements OnInit {
   }
 
   ngAfterViewChecked() {
+    this.isDarkMode = this.darkModeService.get();
     this.fontSize = this.fontSizeService.get();
     this.changeDetectorRef.detectChanges(); // https://stackoverflow.com/questions/34364880/expression-has-changed-after-it-was-checked
   }

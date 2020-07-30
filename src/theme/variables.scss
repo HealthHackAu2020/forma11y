@@ -258,3 +258,26 @@ ion-label.font-label--tiresias {
 ion-label.font-label--default {
   --ion-font-family: 'Roboto';
 }
+
+
+
+
+ion-menu { // side bar
+  ion-content {
+  --ion-background-color: #ffffff;
+  }
+}
+
+ion-router-outlet { // page area
+  ion-content {
+  --ion-background-color: #c6c6c6;
+  }
+}
+
+ion-card {
+  --ion-background-color: #ffffff; 
+}
+
+.hidden {
+  display: none; // temporary while we share for testing
+}

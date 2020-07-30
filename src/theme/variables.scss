@@ -285,3 +285,7 @@ ion-card {
 .hidden {
   display: none; // temporary while we share for testing
 }
+
+ion-item {
+  --padding-start: 8px;
+}

@@ -14,17 +14,30 @@
 
 <ion-content>
   <form>
-    <ion-row>
-      <ion-col size="12" size-md="8" offset-md="2">
-        <ion-card  [style.font-size.em]="fontSize">
+    <ion-grid class="ion-no-padding ion-no-margin">
+      <ion-row class="ion-no-padding ion-no-margin">
+        <ion-col
+          size="12"
+          size-md="8"
+          offset-md="2"
+          class="ion-no-padding ion-no-margin"
+        >
+          <ion-card>
             <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize">Section A: Personal details</ion-card-title>
-
+              <ion-card-title [style.font-size.em]="fontSize"
+                >Section A: Personal details</ion-card-title
+              >
             </ion-card-header>
             <ion-card-content>
               <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Title</ion-label>
-                <ion-select placeholder="Select a title" [style.font-size.em]="fontSize" interface="action-sheet">
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Title</ion-label
+                >
+                <ion-select
+                  placeholder="Select a title"
+                  [style.font-size.em]="fontSize"
+                  interface="action-sheet"
+                >
                   <ion-select-option value="Ms">Ms</ion-select-option>
                   <ion-select-option value="Miss">Miss</ion-select-option>
                   <ion-select-option value="Mrs">Mrs</ion-select-option>
@@ -34,33 +47,55 @@
                 </ion-select>
               </ion-item>
               <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Surname</ion-label>
-                <ion-input placeholder="Surname" type="text" [style.font-size.em]="fontSize"></ion-input>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Surname</ion-label
+                >
+                <ion-input
+                  placeholder="Surname"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Given names</ion-label>
-                <ion-input placeholder="Given names" type="text" [style.font-size.em]="fontSize"></ion-input>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Given names</ion-label
+                >
+                <ion-input
+                  placeholder="Given names"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Date of birth</ion-label>
-                <ion-input placeholder="Date of birth" type="date" [style.font-size.em]="fontSize"></ion-input>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Date of birth</ion-label
+                >
+                <ion-input
+                  placeholder="Date of birth"
+                  type="date"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
               </ion-item>
-              
+
               <ion-radio-group>
-                <ion-list-header>
-                  <ion-label [style.font-size.em]="fontSize">Gender</ion-label>
-                </ion-list-header>
+                <ion-list-header [style.font-size.em]="fontSize"
+                  >Gender</ion-list-header
+                >
                 <ion-grid fixed>
                   <ion-row>
                     <ion-col size="6">
                       <ion-item>
-                        <ion-label [style.font-size.em]="fontSize">Male</ion-label>
+                        <ion-label [style.font-size.em]="fontSize"
+                          >Male</ion-label
+                        >
                         <ion-radio slot="end" value="male"></ion-radio>
                       </ion-item>
                     </ion-col>
                     <ion-col size="6">
                       <ion-item>
-                        <ion-label [style.font-size.em]="fontSize">Female</ion-label>
+                        <ion-label [style.font-size.em]="fontSize"
+                          >Female</ion-label
+                        >
                         <ion-radio slot="end" value="female"></ion-radio>
                       </ion-item>
                     </ion-col>
@@ -70,277 +105,738 @@
               </ion-radio-group>
 
               <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Marital status</ion-label>
-                <ion-select placeholder="Select an option" [style.font-size.em]="fontSize" interface="action-sheet">
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Marital status</ion-label
+                >
+                <ion-select
+                  placeholder="Select an option"
+                  [style.font-size.em]="fontSize"
+                  interface="action-sheet"
+                >
                   <ion-select-option value="Single">Single</ion-select-option>
                   <ion-select-option value="Married">Married</ion-select-option>
                   <ion-select-option value="Defacto">Defacto</ion-select-option>
-                  <ion-select-option value="Separated">Separated</ion-select-option>
-                  <ion-select-option value="Divorced">Divorced</ion-select-option>
+                  <ion-select-option value="Separated"
+                    >Separated</ion-select-option
+                  >
+                  <ion-select-option value="Divorced"
+                    >Divorced</ion-select-option
+                  >
                   <ion-select-option value="Widowed">Widowed</ion-select-option>
                 </ion-select>
               </ion-item>
-
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Occupation</ion-label
+                >
+                <ion-input
+                  placeholder="Occupation"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header [style.font-size.em]="fontSize"
+              >Medicare Card
+            </ion-card-header>
+            <ion-card-content>
               <ion-grid>
-                <ion-text [style.font-size.em]="fontSize">Medicare Card</ion-text>
                 <ion-row>
                   <ion-col size="7">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize" aria-label="Medicare Card number">Card number</ion-label>
-                      <ion-input placeholder="xxxx" type="number" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        aria-label="Medicare Card number"
+                        >Card number</ion-label
+                      >
+                      <ion-input
+                        placeholder="xxxx"
+                        type="number"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                     </ion-item>
                   </ion-col>
                   <ion-col size="5">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize" aria-label="Medicare Reference number">Reference number</ion-label>
-                      <ion-input placeholder="xxxx" type="number" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        aria-label="Medicare Reference number"
+                        >Reference number</ion-label
+                      >
+                      <ion-input
+                        placeholder="xxxx"
+                        type="number"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                     </ion-item>
                   </ion-col>
                   <ion-col size="12">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize">Expiry date</ion-label>
-                      <ion-input placeholder="Expire date" type="date" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        >Expiry date</ion-label
+                      >
+                      <ion-input
+                        placeholder="Expire date"
+                        type="date"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                     </ion-item>
                   </ion-col>
                 </ion-row>
               </ion-grid>
+            </ion-card-content>
+          </ion-card>
 
-              <!-- YOU ARE HERE -->
+          <ion-card>
+            <!-- YOU ARE HERE -->
+            <ion-card-header>
+              <ion-text [style.font-size.em]="fontSize"
+                >Pension, Health Care Card, or Veterans Affairs number(if
+                applicable)</ion-text
+              >
+            </ion-card-header>
+            <ion-card-content>
               <ion-grid>
-                <ion-text [style.font-size.em]="fontSize">Pension, Health Care Card, or Veterans Affairs number(if applicable)</ion-text>
                 <ion-row>
                   <ion-col size="12">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize">Card Number</ion-label>
-                      <ion-input placeholder="xxxx" type="text" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        >Card Number</ion-label
+                      >
+                      <ion-input
+                        placeholder="xxxx"
+                        type="text"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                     </ion-item>
                   </ion-col>
                   <ion-col size="12">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize">Type of Veterans Affairs card</ion-label>
-                      <ion-input placeholder="" type="text" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        >Type of Veterans Affairs card</ion-label
+                      >
+                      <ion-input
+                        placeholder=""
+                        type="text"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                       <!-- change to ion-select maybe? -->
                     </ion-item>
                   </ion-col>
                   <ion-col size="12">
                     <ion-item>
-                      <ion-label position="stacked" [style.font-size.em]="fontSize">Expiry date</ion-label>
-                      <ion-input placeholder="Expire date" type="date" [style.font-size.em]="fontSize"></ion-input>
+                      <ion-label
+                        position="stacked"
+                        [style.font-size.em]="fontSize"
+                        >Expiry date</ion-label
+                      >
+                      <ion-input
+                        placeholder="Expire date"
+                        type="date"
+                        [style.font-size.em]="fontSize"
+                      ></ion-input>
                     </ion-item>
                   </ion-col>
                 </ion-row>
               </ion-grid>
-              
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Occupation</ion-label>
-                <ion-input placeholder="Occupation" type="text" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Home address</ion-label>
-                <ion-input placeholder="xxxx" type="text" [style.font-size.em]="fontSize"></ion-input>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Post code</ion-label> 
-                <ion-input placeholder="xxxx" type="text" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Postal address</ion-label>
-                <ion-input placeholder="xxxx" type="text" [style.font-size.em]="fontSize"></ion-input>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Post code</ion-label> 
-                <ion-input placeholder="xxxx" type="text" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Telephone number</ion-label>
-                <ion-input placeholder="xxxx" type="tel" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Work number</ion-label>
-                <ion-input placeholder="xxxx" type="tel" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Mobile number</ion-label>
-                <ion-input placeholder="xxxx" type="tel" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize">Email</ion-label>
-                <ion-input placeholder="Email" type="email" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <!--  -->
-              <ion-list-header [style.font-size.em]="fontSize">Who can we contact in an emergency?</ion-list-header>
-              <ion-item>
-                  <ion-label position="stacked" [style.font-size.em]="fontSize">Name </ion-label>
-                  <ion-input placeholder="Placeholder" type="text" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label position="stacked" [style.font-size.em]="fontSize">Relationship to you </ion-label>
-                  <ion-input placeholder="Placeholder" type="text" [style.font-size.em]="fontSize"></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label position="stacked" [style.font-size.em]="fontSize">Telephone number </ion-label>
-                  <ion-input placeholder="Placeholder" type="number" [style.font-size.em]="fontSize" ></ion-input>                
-              </ion-item>
-              <ion-item>
-                  <ion-label position="stacked" [style.font-size.em]="fontSize">Work number </ion-label>
-                  <ion-input placeholder="Placeholder" type="number" [style.font-size.em]="fontSize"></ion-input>                
-                </ion-item>
-              <ion-item>
-                  <ion-label position="stacked" [style.font-size.em]="fontSize">Mobile number </ion-label>
-                  <ion-input placeholder="Placeholder" type="number" [style.font-size.em]="fontSize"></ion-input>                
-              </ion-item>
-                
-                <ion-radio-group>
-                  <ion-list-header>
-                    <ion-label [style.font-size.em]="fontSize">Do you have an advance care directive for end of life care?</ion-label>
-                  </ion-list-header>
-                  <ion-grid >
-                    <ion-row>
-                      <ion-col size="6">
-                        <ion-item>
-                          <ion-label [style.font-size.em]="fontSize">Yes</ion-label>
-                          <ion-radio slot="end" value="yes" checked></ion-radio>
-                        </ion-item>
-                      </ion-col>
-                      <ion-col size="6">
-                        <ion-item>
-                          <ion-label [style.font-size.em]="fontSize">No</ion-label>
-                          <ion-radio slot="end" value="no"></ion-radio>
-                        </ion-item>
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-                </ion-radio-group>
             </ion-card-content>
-        </ion-card>
-        
-        <div class="hidden">
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Home Address</ion-label
+                >
+                <ion-input
+                  placeholder="Home Address"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Postcode</ion-label
+                >
+                <ion-input
+                  placeholder="Postcode"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Postal Address</ion-label
+                >
+                <ion-input
+                  placeholder="Postal Address"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Postcode</ion-label
+                >
+                <ion-input
+                  placeholder="Postcode"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Telephone number</ion-label
+                >
+                <ion-input
+                  placeholder="Telephone number"
+                  type="tel"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Work number</ion-label
+                >
+                <ion-input
+                  placeholder="Work number"
+                  type="tel"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Mobile number</ion-label
+                >
+                <ion-input
+                  placeholder="Mobile number"
+                  type="tel"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Email</ion-label
+                >
+                <ion-input
+                  placeholder="Email"
+                  type="email"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle [style.font-size.em]="fontSize"
+                >Next of Kin</ion-card-subtitle
+              >
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Name
+                </ion-label>
+                <ion-input
+                  placeholder="Name"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Relationship to you
+                </ion-label>
+                <ion-input
+                  placeholder="Relationship"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Telephone number
+                </ion-label>
+                <ion-input
+                  placeholder="Telephone number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Work number
+                </ion-label>
+                <ion-input
+                  placeholder="Work number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Mobile number
+                </ion-label>
+                <ion-input
+                  placeholder="Mobile number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle [style.font-size.em]="fontSize"
+                >Who can we contact in an emergency?</ion-card-subtitle
+              >
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Name
+                </ion-label>
+                <ion-input
+                  placeholder="Name"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Relationship to you
+                </ion-label>
+                <ion-input
+                  placeholder="Relationship"
+                  type="text"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Telephone number
+                </ion-label>
+                <ion-input
+                  placeholder="Telephone number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Work number
+                </ion-label>
+                <ion-input
+                  placeholder="Work number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize"
+                  >Mobile number
+                </ion-label>
+                <ion-input
+                  placeholder="Mobile number"
+                  type="number"
+                  [style.font-size.em]="fontSize"
+                ></ion-input>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-radio-group>
+              <ion-list-header [style.font-size.em]="fontSize"
+                  >Do you have an advance care directive for end of life
+                  care?
+              </ion-list-header>
+              <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-item>
+                      <ion-label [style.font-size.em]="fontSize">Yes</ion-label>
+                      <ion-radio slot="end" value="yes" checked></ion-radio>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-item>
+                      <ion-label [style.font-size.em]="fontSize">No</ion-label>
+                      <ion-radio slot="end" value="no"></ion-radio>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+            </ion-radio-group>
+          </ion-card>
+          <!-- 
+                <div class="hidden">
+                <ion-title>Section B: Cultural background</ion-title>
 
-       
-        <ion-title>Section B: Cultural background</ion-title>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+            </ion-list-header>
 
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
-          </ion-list-header>
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="end" value="biff" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Abroginal</ion-label>
+              <ion-radio slot="end" value="griff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="buford"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="tuna"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio slot="end" value="salmon"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
 
           <ion-item>
-            <ion-label>No</ion-label>
-            <ion-radio slot="end" value="biff" checked></ion-radio>
+            <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label>Yes, Abroginal</ion-label>
-            <ion-radio slot="end" value="griff"></ion-radio>
+            <ion-label position="stacked">Country of birth</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
+          </ion-item>
+
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Is English your first language?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="end" value="biff" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Abroginal</ion-label>
+              <ion-radio slot="end" value="griff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="buford"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="tuna"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio slot="end" value="salmon"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+
+          <ion-item>
+            <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label>Yes, Torres Strait Islander</ion-label>
-            <ion-radio slot="end" value="buford"></ion-radio>
+            <ion-label position="stacked">Country of birth</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
+          </ion-item>
+
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Is English your first language?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="end" value="biff" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Abroginal</ion-label>
+              <ion-radio slot="end" value="griff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="buford"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="tuna"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio slot="end" value="salmon"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+
+          <ion-item>
+            <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
-            <ion-radio slot="end" value="tuna"></ion-radio>
+            <ion-label position="stacked">Country of birth</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
+          </ion-item>
+
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Is English your first language?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="end" value="biff" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Abroginal</ion-label>
+              <ion-radio slot="end" value="griff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="buford"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="tuna"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio slot="end" value="salmon"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+
+          <ion-item>
+            <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label>Other</ion-label>
-            <ion-radio slot="end" value="salmon"></ion-radio>
+            <ion-label position="stacked">Country of birth</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
-        </ion-radio-group>
 
-        <ion-item>
-          <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Is English your first language?</ion-label>
+            </ion-list-header>
 
-        <ion-item>
-          <ion-label position="stacked">Country of birth</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+            <ion-item>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+            </ion-list-header>
 
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Is English your first language?</ion-label>
-          </ion-list-header>
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="end" value="biff" checked></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Abroginal</ion-label>
+              <ion-radio slot="end" value="griff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="buford"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+              <ion-radio slot="end" value="tuna"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio slot="end" value="salmon"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
 
           <ion-item>
-            <ion-label>Yes</ion-label>
-            <ion-radio slot="end" value="biff" checked></ion-radio>
+            <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label>No</ion-label>
-            <ion-radio slot="end" value="griff"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Do you require an interpreter?</ion-label>
-          </ion-list-header>
-
-          <ion-item>
-            <ion-label>Yes</ion-label>
-            <ion-radio slot="end" value="biff" checked></ion-radio>
+            <ion-label position="stacked">Country of birth</ion-label>
+            <ion-input placeholder="Placeholder" type="text"></ion-input>
           </ion-item>
 
-          <ion-item>
-            <ion-label>No</ion-label>
-            <ion-radio slot="end" value="griff"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Is English your first language?</ion-label>
+            </ion-list-header>
 
-        <ion-item>
-          <ion-label position="stacked">Please specify language</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+            <ion-item>
+            <ion-radio-group>
+              <ion-list-header>
+                <ion-label>Knowing your cultural background can help us provide healthcare that meets your individual needs. Are you of Abroginal or Torres Strait Islander origin?</ion-label>
+              </ion-list-header>
 
-        <ion-title>Section C: Allergies and medicines</ion-title>
+              <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio slot="end" value="biff" checked></ion-radio>
+              </ion-item>
 
-        <ion-buttons>
-          <ion-button>Add allergen</ion-button>
-          <ion-button>Remove allergen</ion-button>
-        </ion-buttons>
+              <ion-item>
+                <ion-label>Yes, Abroginal</ion-label>
+                <ion-radio slot="end" value="griff"></ion-radio>
+              </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked">List allergies and intolerances to medications</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+              <ion-item>
+                <ion-label>Yes, Torres Strait Islander</ion-label>
+                <ion-radio slot="end" value="buford"></ion-radio>
+              </ion-item>
 
-        
+              <ion-item>
+                <ion-label>Yes, both Abroginal and Torres Strait Islander</ion-label>
+                <ion-radio slot="end" value="tuna"></ion-radio>
+              </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked">Describe your reaction</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+              <ion-item>
+                <ion-label>Other</ion-label>
+                <ion-radio slot="end" value="salmon"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
 
-        <ion-item>
-          <ion-label position="stacked">List regular medications and doses, and complementary medicines and doses</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+            <ion-item>
+              <ion-label position="stacked">What other cultural background (eg Mediterranean, Asian, African)?</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked">Our practice uses a reminder system to help you maintain your health.
-            The practice sends reminders by post, email, telephone or SMS
-            for procedures such as vaccinations, Pap tests and other health reviews.</ion-label>
-          <ion-label
-              >I consent to being contacted with reminders to help me maintain my health&nbsp;<ion-icon name="information-circle"></ion-icon>
-            >
-          </ion-label>
-          <ion-checkbox slot="end"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Our practice also sends information to the Australian Childhood
-            Immunisation Register and Pap Smear Register. These registers also
-            send reminders, which can be helpful if you move.</ion-label>
-          <ion-label
-              >I consent to being contacted with reminders to help me maintain my health&nbsp;<ion-icon name="information-circle"></ion-icon>
-          </ion-label>
-          <ion-checkbox slot="end"></ion-checkbox>
-        </ion-item>
-        <!--  -->
-      </div>
+            <ion-item>
+              <ion-label position="stacked">Country of birth</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
 
-      </ion-col>
-    </ion-row>
+            <ion-radio-group>
+              <ion-list-header>
+                <ion-label>Is English your first language?</ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio slot="end" value="biff" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio slot="end" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+
+            <ion-radio-group>
+              <ion-list-header>
+                <ion-label>Do you require an interpreter?</ion-label>
+              </ion-list-header>
+
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio slot="end" value="biff" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio slot="end" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+
+            <ion-item>
+              <ion-label position="stacked">Please specify language</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
+
+            <ion-title>Section C: Allergies and medicines</ion-title>
+
+            <ion-buttons>
+              <ion-button>Add allergen</ion-button>
+              <ion-button>Remove allergen</ion-button>
+            </ion-buttons>
+
+            <ion-item>
+              <ion-label position="stacked">List allergies and intolerances to medications</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Describe your reaction</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">List regular medications and doses, and complementary medicines and doses</ion-label>
+              <ion-input placeholder="Placeholder" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Our practice uses a reminder system to help you maintain your health.
+                The practice sends reminders by post, email, telephone or SMS
+                for procedures such as vaccinations, Pap tests and other health reviews.</ion-label>
+              <ion-label
+                  >I consent to being contacted with reminders to help me maintain my health&nbsp;<ion-icon name="information-circle"></ion-icon>
+                >
+              </ion-label>
+              <ion-checkbox slot="end"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Our practice also sends information to the Australian Childhood
+                Immunisation Register and Pap Smear Register. These registers also
+                send reminders, which can be helpful if you move.</ion-label>
+              <ion-label
+                  >I consent to being contacted with reminders to help me maintain my health&nbsp;<ion-icon name="information-circle"></ion-icon>
+              </ion-label>
+              <ion-checkbox slot="end"></ion-checkbox>
+            </ion-item>
+          </div>
+               -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </form>
 </ion-content>

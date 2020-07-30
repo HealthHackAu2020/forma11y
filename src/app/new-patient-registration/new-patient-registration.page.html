@@ -138,8 +138,10 @@
             </ion-card-content>
           </ion-card>
           <ion-card>
-            <ion-card-header [style.font-size.em]="fontSize"
-              >Medicare Card
+            <ion-card-header>
+              <ion-card-title [style.font-size.em]="fontSize"
+                >Medicare card</ion-card-title
+              >
             </ion-card-header>
             <ion-card-content>
               <ion-grid>
@@ -196,9 +198,9 @@
           <ion-card>
             <!-- YOU ARE HERE -->
             <ion-card-header>
-              <ion-text [style.font-size.em]="fontSize"
+              <ion-card-title [style.font-size.em]="fontSize"
                 >Pension, Health Care Card, or Veterans Affairs number(if
-                applicable)</ion-text
+                applicable)</ion-card-title
               >
             </ion-card-header>
             <ion-card-content>
@@ -252,6 +254,11 @@
             </ion-card-content>
           </ion-card>
           <ion-card>
+            <ion-card-header>
+              <ion-card-title [style.font-size.em]="fontSize"
+                >Contact Details</ion-card-title
+              >
+            </ion-card-header>
             <ion-card-content>
               <ion-item>
                 <ion-label position="stacked" [style.font-size.em]="fontSize"
@@ -262,12 +269,15 @@
                   type="text"
                   [style.font-size.em]="fontSize"
                 ></ion-input>
+              </ion-item>
+              <ion-item>
                 <ion-label position="stacked" [style.font-size.em]="fontSize"
                   >Postcode</ion-label
                 >
                 <ion-input
                   placeholder="Postcode"
                   type="text"
+                  pattern="[0-9]*"
                   [style.font-size.em]="fontSize"
                 ></ion-input>
               </ion-item>
@@ -280,12 +290,15 @@
                   type="text"
                   [style.font-size.em]="fontSize"
                 ></ion-input>
+              </ion-item>
+              <ion-item>
                 <ion-label position="stacked" [style.font-size.em]="fontSize"
                   >Postcode</ion-label
                 >
                 <ion-input
                   placeholder="Postcode"
                   type="text"
+                  pattern="[0-9]*"
                   [style.font-size.em]="fontSize"
                 ></ion-input>
               </ion-item>
@@ -333,8 +346,8 @@
           </ion-card>
           <ion-card>
             <ion-card-header>
-              <ion-card-subtitle [style.font-size.em]="fontSize"
-                >Next of Kin</ion-card-subtitle
+              <ion-card-title [style.font-size.em]="fontSize"
+                >Next of Kin</ion-card-title
               >
             </ion-card-header>
             <ion-card-content>
@@ -392,8 +405,8 @@
           </ion-card>
           <ion-card>
             <ion-card-header>
-              <ion-card-subtitle [style.font-size.em]="fontSize"
-                >Who can we contact in an emergency?</ion-card-subtitle
+              <ion-card-title [style.font-size.em]="fontSize"
+                >Who can we contact in an emergency?</ion-card-title
               >
             </ion-card-header>
             <ion-card-content>
@@ -452,27 +465,30 @@
           <ion-card>
             <ion-radio-group>
               <ion-list-header [style.font-size.em]="fontSize"
-                  >Do you have an advance care directive for end of life
-                  care?
+                >Do you have an advance care directive for end of life care?
               </ion-list-header>
               <ion-card-content>
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="6">
-                    <ion-item>
-                      <ion-label [style.font-size.em]="fontSize">Yes</ion-label>
-                      <ion-radio slot="end" value="yes" checked></ion-radio>
-                    </ion-item>
-                  </ion-col>
-                  <ion-col size="6">
-                    <ion-item>
-                      <ion-label [style.font-size.em]="fontSize">No</ion-label>
-                      <ion-radio slot="end" value="no"></ion-radio>
-                    </ion-item>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="6">
+                      <ion-item>
+                        <ion-label [style.font-size.em]="fontSize"
+                          >Yes</ion-label
+                        >
+                        <ion-radio slot="end" value="yes" checked></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="6">
+                      <ion-item>
+                        <ion-label [style.font-size.em]="fontSize"
+                          >No</ion-label
+                        >
+                        <ion-radio slot="end" value="no"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-content>
             </ion-radio-group>
           </ion-card>
           <!-- 

@@ -78,3 +78,4 @@ Use current Ionic Angular to leverage:
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Accessible Color Generator](https://learnui.design/tools/accessible-color-generator.html)
 - [Article a11y Dyslexia](https://uxdesign.cc/web-accessibility-for-people-with-dyslexia-emerging-research-1129129596d3)
+- [Bootstrap template for inspiration](https://labinator.com/wordpress-marketplace/lab-demo/)

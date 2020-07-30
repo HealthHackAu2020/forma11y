@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../validation.service';
-import { PopoverController } from '@ionic/angular';
 import { DarkModeService } from '../dark-mode.service';
 import { FontSizeService } from '../font-size.service';
 

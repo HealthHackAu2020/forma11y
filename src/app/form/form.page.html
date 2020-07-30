@@ -16,7 +16,6 @@
   <form [formGroup]="dummyForm">
     <ion-row>
       <ion-col size="12" size-md="8" offset-md="2">
-        <p [style.font-size.rem]="fontSize">Test - rem</p>
         <p [style.font-size.em]="fontSize">Test - em</p>
         <ion-item>
           <ion-label position="stacked" [style.font-size.em]="fontSize"
@@ -36,12 +35,12 @@
       </ion-col>
       <ion-col size="12" size-md="8" offset-md="2">
         <ion-item>
-          <ion-label position="stacked" [style.font-size.rem]="fontSize">Input 2</ion-label>
+          <ion-label position="stacked" [style.font-size.em]="fontSize">Input 2</ion-label>
           <ion-input
             placeholder="Placeholder"
             type="text"
             formControlName="input2"
-            [style.font-size.rem]="fontSize"
+            [style.font-size.em]="fontSize"
           ></ion-input>
         </ion-item>
         <validation-error

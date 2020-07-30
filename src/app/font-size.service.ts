@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FontSizeService {
-  fontSize: number = 1.5;
+  fontSize: number = 1.25;
 
   constructor() { }
   get() {

@@ -16,211 +16,208 @@
   <form>
     <ion-row>
       <ion-col size="12" size-md="8" offset-md="2">
-        <ion-item>
-          <ion-label position="stacked">Input Text</ion-label>
-          <ion-input placeholder="Placeholder" type="text"></ion-input>
-        </ion-item>
+        <ion-card  [style.font-size.em]="fontSize">
+            <ion-card-header>
+              <ion-card-title [style.font-size.em]="fontSize">Section A: Personal details</ion-card-title>
 
-        <ion-title>Section A: Personal details</ion-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize">Title</ion-label>
+                <ion-select placeholder="Select a title" [style.font-size.em]="fontSize" interface="action-sheet">
+                  <ion-select-option value="Ms">Ms</ion-select-option>
+                  <ion-select-option value="Miss">Miss</ion-select-option>
+                  <ion-select-option value="Mrs">Mrs</ion-select-option>
+                  <ion-select-option value="Mr">Mr</ion-select-option>
+                  <ion-select-option value="Dr">Dr</ion-select-option>
+                  <ion-select-option value="Rev">Rev</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize">Surname</ion-label>
+                <ion-input placeholder="Surname" type="text" [style.font-size.em]="fontSize"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize">Given names</ion-label>
+                <ion-input placeholder="Given names" type="text" [style.font-size.em]="fontSize"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize">Date of birth</ion-label>
+                <ion-input placeholder="Date of birth" type="date" [style.font-size.em]="fontSize"></ion-input>
+              </ion-item>
+              
+              <ion-radio-group>
+                <ion-list-header>
+                  <ion-label [style.font-size.em]="fontSize">Gender</ion-label>
+                </ion-list-header>
+                <ion-grid fixed>
+                  <ion-row>
+                    <ion-col size="6">
+                      <ion-item>
+                        <ion-label [style.font-size.em]="fontSize">Male</ion-label>
+                        <ion-radio slot="end" value="male"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="6">
+                      <ion-item>
+                        <ion-label [style.font-size.em]="fontSize">Female</ion-label>
+                        <ion-radio slot="end" value="female"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <!-- Add other option and show text box if other option is ticked -->
+                </ion-grid>
+              </ion-radio-group>
 
-        <ion-item>
-          <ion-label position="stacked">Title</ion-label>
-          <ion-input placeholder="title" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Surname</ion-label>
-          <ion-input placeholder="surname" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Given names</ion-label>
-          <ion-input placeholder="given names" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Date of birth</ion-label>
-          <ion-input placeholder="given names" type="date"></ion-input>
-        </ion-item>
+              <ion-item>
+                <ion-label position="stacked" [style.font-size.em]="fontSize">Marital status</ion-label>
+                <ion-select placeholder="Select an option" [style.font-size.em]="fontSize" interface="action-sheet">
+                  <ion-select-option value="Single">Single</ion-select-option>
+                  <ion-select-option value="Married">Married</ion-select-option>
+                  <ion-select-option value="Defacto">Defacto</ion-select-option>
+                  <ion-select-option value="Separated">Separated</ion-select-option>
+                  <ion-select-option value="Divorced">Divorced</ion-select-option>
+                  <ion-select-option value="Widowed">Widowed</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <!-- YOU ARE HERE -->
+              <ion-grid>
+                <ion-text [style.font-size.em]="fontSize">Medicare Card</ion-text>
+                <ion-row>
+                  <ion-col size="7">
+                    <ion-item>
+                      <ion-label position="stacked" [style.font-size.em]="fontSize" aria-label="Medicare Card number">Card number</ion-label>
+                      <ion-input placeholder="xxxx" type="number"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5">
+                    <ion-item>
+                      <ion-label position="stacked" [style.font-size.em]="fontSize" aria-label="Medicare Reference number">Reference number</ion-label>
+                      <ion-input placeholder="xxxx" type="number"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              
+              <ion-item>
+                <ion-label position="stacked">Medicare card expiry date</ion-label>
+                <ion-input type="date"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Pension, Health Care Card, or Veterans Affairs number(if applicable)</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Type of Veterans Affairs card</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Expiry date</ion-label>
+                <ion-input type="date"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Occupation</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Input Email</ion-label>
+                <ion-input placeholder="Placeholder" type="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Home address</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+                <ion-label position="stacked">Post code</ion-label> 
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Postal address</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+                <ion-label position="stacked">Post code</ion-label> 
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Telephone number</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Work number</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Mobile number</ion-label>
+                <ion-input placeholder="xxxx" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input
+                    placeholder="Email"
+                    type="email"
+                  ></ion-input>
+              </ion-item>
+      
+              <!--Saad's work-->
+      
+              <ion-list-header>
+                <ion-label>Next of Kin </ion-label>
+              </ion-list-header>
+             
+      
+              <ion-item>
+                <ion-label position="stacked">Name </ion-label>
+                <ion-input
+                    placeholder="Placeholder"
+                    type="text"
+                  ></ion-input>
+                </ion-item>
+                <ion-item>
+                <ion-label position="stacked">Relationship to you </ion-label>
+                <ion-input
+                    placeholder="Placeholder"
+                    type="text"
+                  ></ion-input>
+                </ion-item>
+                <ion-item>
+                <ion-label position="stacked">Telephone number </ion-label>
+                <ion-input
+                    placeholder="Placeholder"
+                    type="number"
+                  ></ion-input>                
+                </ion-item>
+                <ion-item>
+                  <ion-label position="stacked">Work number </ion-label>
+                  <ion-input
+                      placeholder="Placeholder"
+                      type="number"
+                    ></ion-input>                
+                </ion-item>
+                <ion-item>
+                  <ion-label position="stacked">Mobile number </ion-label>
+                  <ion-input
+                      placeholder="Placeholder"
+                      type="number"
+                    ></ion-input>                
+                </ion-item>
+                
+                <ion-radio-group>
+                  <ion-list-header>
+                    <ion-label>Do you have an advance care directive for end of life care?</ion-label>
+                  </ion-list-header>
         
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Gender</ion-label>
-          </ion-list-header>
-
-          <ion-item>
-            <ion-label>Male</ion-label>
-            <ion-radio slot="end" value="biff" checked></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Female</ion-label>
-            <ion-radio slot="end" value="griff"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Marital status</ion-label>
-          </ion-list-header>
-
-          <ion-item>
-            <ion-label>Single</ion-label>
-            <ion-radio slot="end" value="biff" checked></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Married</ion-label>
-            <ion-radio slot="end" value="griff"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Defacto</ion-label>
-            <ion-radio slot="end" value="buford"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Separated</ion-label>
-            <ion-radio slot="end" value="bufors"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Divorced</ion-label>
-            <ion-radio slot="end" value="bufork"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Widowed</ion-label>
-            <ion-radio slot="end" value="buforl"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio slot="end" value="biff" checked></ion-radio>
+                  </ion-item>
         
-        <ion-item>
-          <ion-label position="stacked">Medicare card number</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Medicare reference number</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Medicare card expiry date</ion-label>
-          <ion-input type="date"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Pension, Health Care Card, or Veterans Affairs number(if applicable)</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Type of Veterans Affairs card</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Expiry date</ion-label>
-          <ion-input type="date"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Occupation</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Home address</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-          <ion-label position="stacked">Post code</ion-label> 
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Postal address</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-          <ion-label position="stacked">Post code</ion-label> 
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Telephone number</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Work number</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Mobile number</ion-label>
-          <ion-input placeholder="xxxx" type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Email</ion-label>
-          <ion-input
-              placeholder="Email"
-              type="email"
-            ></ion-input>
-        </ion-item>
-
-        <!--Saad's work-->
-
-        <ion-list-header>
-          <ion-label>Next of Kin </ion-label>
-        </ion-list-header>
+                  <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio slot="end" value="griff"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+            </ion-card-content>
+        </ion-card>
+        
        
-
-        <ion-item>
-          <ion-label position="stacked">Name </ion-label>
-          <ion-input
-              placeholder="Placeholder"
-              type="text"
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-          <ion-label position="stacked">Relationship to you </ion-label>
-          <ion-input
-              placeholder="Placeholder"
-              type="text"
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-          <ion-label position="stacked">Telephone number </ion-label>
-          <ion-input
-              placeholder="Placeholder"
-              type="number"
-            ></ion-input>                
-          </ion-item>
-          <ion-item>
-            <ion-label position="stacked">Work number </ion-label>
-            <ion-input
-                placeholder="Placeholder"
-                type="number"
-              ></ion-input>                
-          </ion-item>
-          <ion-item>
-            <ion-label position="stacked">Mobile number </ion-label>
-            <ion-input
-                placeholder="Placeholder"
-                type="number"
-              ></ion-input>                
-          </ion-item>
-          
-          <ion-radio-group>
-            <ion-list-header>
-              <ion-label>Do you have an advance care directive for end of life care?</ion-label>
-            </ion-list-header>
-  
-            <ion-item>
-              <ion-label>Yes</ion-label>
-              <ion-radio slot="end" value="biff" checked></ion-radio>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label>No</ion-label>
-              <ion-radio slot="end" value="griff"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-
-          
-
-        
-
-        <!--My work-->
-        <ion-item>
-          <ion-label position="stacked">Input Email</ion-label>
-          <ion-input placeholder="Placeholder" type="email"></ion-input>
-        </ion-item>
-
         <ion-title>Section B: Cultural background</ion-title>
 
         <ion-radio-group>

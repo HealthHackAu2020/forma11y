@@ -1,3 +1,6 @@
+/* Accessible Fonts */ 
+
+/* OpenDyslexic */ 
 @font-face {
     font-family: 'OpenDyslexic';
     font-style: normal;
@@ -24,4 +27,73 @@
     font-style: italic;
     font-weight: bold;
     src: url('src/assets/fonts/OpenDyslexic-BoldItalic.otf');
+}
+
+/* AndikaNewBasic */ 
+@font-face {
+    font-family: 'AndikaNewBasic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('src/assets/fonts/AndikaNewBasic-R.ttf');
+}
+
+@font-face {
+    font-family: 'AndikaNewBasic';
+    font-style: normal;
+    font-weight: bold;
+    src: url('src/assets/fonts/AndikaNewBasic-B.ttf');
+}
+
+@font-face {
+    font-family: 'AndikaNewBasic';
+    font-style: italic;
+    font-weight: normal;
+    src: url('src/assets/fonts/AndikaNewBasic-I.ttf');
+}
+
+@font-face {
+    font-family: 'AndikaNewBasic';
+    font-style: italic;
+    font-weight: bold;
+    src: url('src/assets/fonts/AndikaNewBasic-BI.ttf');
+}
+
+/* Inter */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    src: url('src/assets/fonts/Inter-Regular.woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('src/assets/fonts/Inter-SemiBold.woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: normal;
+    src: url('src/assets/fonts/Inter-Italic.woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    src: url('src/assets/fonts/Inter-SemiBoldItalic.woff');
+}
+
+/* Tiresias */ 
+@font-face {
+    font-family: 'Tiresias';
+    font-style: normal;
+    font-weight: normal;
+    src: url('src/assets/fonts/Tiresias_Infofont-webfont.ttf');
+}
+@font-face {
+    font-family: 'Tiresias';
+    font-style: italic;
+    font-weight: normal;
+    src: url('src/assets/fonts/Tiresias_Infofont_Italic-webfont.ttf');
 }

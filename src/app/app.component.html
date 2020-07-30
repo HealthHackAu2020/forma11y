@@ -4,7 +4,7 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
       <ion-toolbar>
-        <ion-title>Forma11y</ion-title>
+        <ion-title aria-label="Formally">Forma11y</ion-title>
       </ion-toolbar>
     </ion-header>
       <ion-content>
@@ -12,7 +12,7 @@
           <ion-list-header>Patient View</ion-list-header>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of patientPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'" aria-hidden="true"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -21,7 +21,7 @@
           <ion-list-header>Clinic View</ion-list-header>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of clinicPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'" aria-hidden="true"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -30,7 +30,7 @@
           <ion-list-header>Dev Pages</ion-list-header>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of devPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'" aria-hidden="true"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

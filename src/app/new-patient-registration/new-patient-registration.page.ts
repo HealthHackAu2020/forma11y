@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { DarkModeService } from '../dark-mode.service';
 import { PopoverController } from '@ionic/angular';
-import { AccessibilityFeaturesComponent } from '../components/accessibility-features/accessibility-features.component';
 import { FormGroup } from '@angular/forms';
 import { FontSizeService } from '../font-size.service';
 
@@ -16,7 +15,7 @@ export class NewPatientRegistrationPage implements OnInit {
   newPatientRegistrationForm: FormGroup;
   fontSize: number;
 
-  constructor(private popoverController: PopoverController, private darkModeService: DarkModeService, private fontSizeService: FontSizeService, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private darkModeService: DarkModeService, private fontSizeService: FontSizeService, private changeDetectorRef: ChangeDetectorRef) {
     // TODO :: apply formBuilder to form in html file
     // this.newPatientRegistrationForm = this.formBuilder.group({
     //   input1: ['', ValidationService.isRequired],
@@ -26,19 +25,14 @@ export class NewPatientRegistrationPage implements OnInit {
   }
 
   ngOnInit() {
-    this.isDarkMode = this.darkModeService.get();
-    this.fontSize = this.fontSizeService.get();
-  }
-
-  async showA11yFeatures(event: any) {
-    const popover = await this.popoverController.create({
-      component: AccessibilityFeaturesComponent,
-      event
-    })
-    return await popover.present();  
+    this.getDefaults();
   }
 
   ngAfterViewChecked() {
+    this.getDefaults();
+  }
+
+  getDefaults() {
     this.isDarkMode = this.darkModeService.get();
     this.fontSize = this.fontSizeService.get();
     this.changeDetectorRef.detectChanges(); // https://stackoverflow.com/questions/34364880/expression-has-changed-after-it-was-checked

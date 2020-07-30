@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'clinic',
     loadChildren: () => import('./clinic/clinic.module').then( m => m.ClinicPageModule)
+  },
+  {
+    path: 'accessbility-features',
+    loadChildren: () => import('./accessbility-features/accessbility-features.module').then( m => m.AccessbilityFeaturesPageModule)
   }
 
 ];

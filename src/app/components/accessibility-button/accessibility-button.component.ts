@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { AccessibilityFeaturesComponent } from '../accessibility-features/accessibility-features.component';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, ModalController } from '@ionic/angular';
 import { DarkModeService } from 'src/app/dark-mode.service';
+import { AccessbilityFeaturesPage } from 'src/app/accessbility-features/accessbility-features.page';
 @Component({
   selector: 'accessibility-button',
   template: `
@@ -26,14 +26,14 @@ import { DarkModeService } from 'src/app/dark-mode.service';
 })
 export class AccessibilityButtonComponent implements OnInit {
   isDarkMode: boolean;
-  constructor(private popoverController: PopoverController, private darkModeService: DarkModeService, private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(private darkModeService: DarkModeService, private changeDetectorRef: ChangeDetectorRef, private modalController: ModalController) { }
 
   async showA11yFeatures(event: any) {
-    const popover = await this.popoverController.create({
-      component: AccessibilityFeaturesComponent,
-      event
+    const modal = await this.modalController.create({
+      component: AccessbilityFeaturesPage,
+      swipeToClose: true
     })
-    return await popover.present();  
+    return await modal.present();  
   }
 
   ngOnInit() {

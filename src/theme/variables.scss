@@ -231,51 +231,55 @@ body[color-theme="dark"] {
 // TODO :: Override FontSize with viewport width sizes eg `font-size: 8vw`
 
 body[font-readable="true"] {
+  // TODO :: create mixin
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
+  ion-title {
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+  }
 }
 
 body[font-family="open-dyslexic"],
 ion-label.font-label--open-dyslexic {
-  --ion-font-family: 'OpenDyslexic';
+  --ion-font-family: "OpenDyslexic";
 }
 
 body[font-family="andika-new-basic"],
 ion-label.font-label--andika-new-basic {
-  --ion-font-family: 'AndikaNewBasic';
+  --ion-font-family: "AndikaNewBasic";
 }
 
 body[font-family="inter"],
 ion-label.font-label--inter {
-  --ion-font-family: 'Inter';
+  --ion-font-family: "Inter";
 }
 
 body[font-family="tiresias"],
 ion-label.font-label--tiresias {
-  --ion-font-family: 'Tiresias';
+  --ion-font-family: "Tiresias";
 }
 
 ion-label.font-label--default {
-  --ion-font-family: 'Roboto';
+  --ion-font-family: "Roboto";
 }
 
-
-
-
-ion-menu { // side bar
+ion-menu {
+  // side bar
   ion-content {
-  --ion-background-color: #ffffff;
+    --ion-background-color: #ffffff;
   }
 }
 
-ion-router-outlet { // page area
+ion-router-outlet {
+  // page area
   ion-content {
-  --ion-background-color: #c6c6c6;
+    --ion-background-color: #c6c6c6;
   }
 }
 
 ion-card {
-  --ion-background-color: #ffffff; 
+  --ion-background-color: #ffffff;
 }
 
 .hidden {

@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title [style.font-size.em]="fontSize" aria-label="Accessibility Features">
+      {{title}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-list>
+          <ion-item>
+            <ion-label>Dark mode</ion-label>
+            <ion-toggle
+              (ionChange)="onToggleDarkMode($event)"
+              [checked]="isDarkMode"
+            ></ion-toggle>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Reader Mode</ion-label>
+            <ion-toggle
+              (ionChange)="onToggleReaderMode($event)"
+              [checked]="isReaderMode"
+            ></ion-toggle>
+          </ion-item>
+        
+          <ion-item>
+            <ion-range
+              min="1"
+              max="2.5"
+              snaps="true"
+              step="0.25"
+              [value]="fontSize"
+              (ionChange)="onChangeFontSize($event)"
+            >
+              <ion-label slot="start" [style.font-size.px]="12">A</ion-label>
+              <ion-label slot="end" [style.font-size.px]="20">A</ion-label>
+            </ion-range>
+          </ion-item>
+          <ion-radio-group
+            [value]="fontFamily"
+            (ionChange)="onFontFamilyChange($event)"
+          >
+            <ion-list-header>
+              <ion-label>Font Family</ion-label>
+            </ion-list-header>
+            <ion-item>
+              <ion-label class="font-label--default">Default</ion-label>
+              <ion-radio slot="end" value=""></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="font-label--open-dyslexic">Open Dyslexic</ion-label>
+              <ion-radio slot="end" value="open-dyslexic"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="font-label--andika-new-basic">Andika</ion-label>
+              <ion-radio slot="end" value="andika-new-basic"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="font-label--inter">Inter</ion-label>
+              <ion-radio slot="end" value="inter"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label class="font-label--tiresias">Tiresias</ion-label>
+              <ion-radio slot="end" value="tiresias"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button (click)="closeModal()" shape="round" expand="block">
+        Done
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

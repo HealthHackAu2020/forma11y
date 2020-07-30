@@ -277,3 +277,7 @@ ion-router-outlet { // page area
 ion-card {
   --ion-background-color: #ffffff; 
 }
+
+.hidden {
+  display: none; // temporary while we share for testing
+}

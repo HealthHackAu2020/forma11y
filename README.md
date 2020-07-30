@@ -69,6 +69,7 @@ Use current Ionic Angular to leverage:
 ## Resources
 - [Notes](https://docs.google.com/document/d/1VDXm7wYrZo-NQRr53VmZmT3MpEQXoVJKYoRbQAu1Iec/edit)
 - [a11yproject](https://www.a11yproject.com/)
+- [Inclusive Design - Microsoft](https://www.microsoft.com/design/inclusive/)
 - [HTML Codesniffer Bookmarklet](https://marketplace.squiz.net/extensions/html-codesniffer)
 - [Lighthouse in Chrome Dev Tools](https://developers.google.com/web/tools/lighthouse)
 - [Spectrum Google Chrome Extension](https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb?hl=en)

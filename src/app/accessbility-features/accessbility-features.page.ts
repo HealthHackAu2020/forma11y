@@ -39,6 +39,7 @@ export class AccessbilityFeaturesPage implements OnInit {
   
   async onChangeFontSize(event: any) {
     const size = await event.detail.value;
+    console.info(size);
     this.fontSizeService.set(size);
   }
 

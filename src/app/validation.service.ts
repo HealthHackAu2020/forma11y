@@ -63,7 +63,10 @@ export class ValidationService {
     }
   }
 
-  // Medicare: https://stackoverflow.com/questions/3589345/how-do-i-validate-an-australian-medicare-number
+  // Medicare Card:
+  // https://stackoverflow.com/questions/3589345/how-do-i-validate-an-australian-medicare-number
+  // https://www.clearwater.com.au/code/medicare
+  
   static isValidMedicareCardNumber(control: AbstractControl) {
     const medicareNumber = control.value;
     let isValid: boolean;

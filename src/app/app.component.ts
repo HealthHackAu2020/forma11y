@@ -21,8 +21,12 @@ export class AppComponent implements OnInit {
       title: "New Patient Registration",
       url: "/new-patient-registration",
       icon: "document-text",
-    }
-    
+    },
+    {
+      title: "QR Code Scanner",
+      url: "/scanner",
+      icon: "add",
+    },
   ];
   public clinicPages = [
     {

@@ -1,5 +1,7 @@
 {
   "name": "forma11y",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

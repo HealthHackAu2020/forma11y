@@ -18,41 +18,89 @@
       <ion-col size="12">
         <ion-card>
           <ion-card-header>
-            <ion-card-title [style.font-size.em]="fontSize">ABOUT FORMA11Y</ion-card-title>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >ABOUT FORMA11Y</ion-card-title
+            >
           </ion-card-header>
           <ion-card-content>
             <p [style.font-size.em]="fontSize">
-              <a href="https://github.com/HealthHackAu2020/forma11y">FORMA11Y</a> was built to decrease barriers for blind and vision impaired people in medical practices as part of <a href="https://www.healthhack.com.au/where-to-find-the-problems">HealthHack 2020</a>.
+              <a href="https://github.com/HealthHackAu2020/forma11y"
+                >FORMA11Y</a
+              >
+              was built to decrease barriers for blind and vision impaired
+              people in medical practices as part of
+              <a href="https://www.healthhack.com.au/where-to-find-the-problems"
+                >HealthHack 2020</a
+              >.
             </p>
           </ion-card-content>
         </ion-card>
-        
+
         <ion-card>
-          <ion-card-header>
-            <ion-card-title [style.font-size.em]="fontSize">One of the biggest misconceptions in design is that accessibility features are only used by people with disabilities.</ion-card-title>
-          </ion-card-header>
           <ion-card-content>
-            <p [style.font-size.em]="fontSize">
-              ~ Anonymous
-            </p>
-            <img src="https://healthhackau2020.github.io/forma11y/assets/img/undraw_project_feedback_2s92.svg" alt="We use a Persona Spectrum to understand related limitations
-            across a spectrum of permanent, temporary, and situational
-            disabilities. It’s a quick tool to help foster empathy and to
-            show how a solution can scale to a broader audience."/>
-            <small [style.font-size.em]="fontSize">source: <a href="https://undraw.co/">https://undraw.co/</a></small>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12" size-md="6">
+                  <blockquote [style.font-size.em]="fontSize">
+                    <p class="card-text">
+                      One of the biggest misconceptions in design is that
+                      accessibility features are only used by people with
+                      disabilities.
+                    </p>
+                    <footer>~<cite>Anonymous</cite></footer>
+                  </blockquote>
+                </ion-col>
+                <ion-col size="12" size-md="6">
+                  <img
+                    src="https://healthhackau2020.github.io/forma11y/assets/img/undraw_project_feedback_2s92.svg"
+                    alt="Illustration Persona in wheelchair holding a speech bubble and large Phone in the background"
+                  />
+                  <small [style.font-size.em]="fontSize"
+                    >source:
+                    <a href="https://undraw.co/">https://undraw.co/</a></small
+                  >
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </ion-card-content>
         </ion-card>
 
         <ion-card>
           <ion-card-header>
-            <ion-card-title [style.font-size.em]="fontSize">SOLVE FOR ONE, EXTEND TO MANY</ion-card-title>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >SOLVE FOR ONE, EXTEND TO MANY</ion-card-title
+            >
           </ion-card-header>
           <ion-card-content>
-            <img src="https://healthhackau2020.github.io/forma11y/assets/img/the_persona_spectrum.png" alt="Illustration Persona in wheelchair holding a speech bubble and large Phone in the background"/>
-            <small [style.font-size.em]="fontSize">source: <a href="https://www.microsoft.com/design/inclusive/">Microsoft: Inclusive Design Toolkit</a></small>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12" size-md="6">
+                  <div class="place-items-center">
+                    <img
+                      src="https://healthhackau2020.github.io/forma11y/persona-spectrum-inclusive-design.png"
+                      alt="Microsoft Persona Spectrum showcasing a range of limitations to build empathy"
+                    />
+                  </div>
+                </ion-col>
+                <ion-col size="12" size-md="6">
+                  <p class="card-text">
+                    Our goal is to use Microsoft's Persona Spectrum to
+                    understand related limitations across a spectrum of
+                    permanent, temporary, and situational disabilities. It’s a
+                    quick tool to help foster empathy and to show how a solution
+                    can scale to a broader audience.
+                  </p>
+                  <small [style.font-size.em]="fontSize"
+                    >source:
+                    <a href="https://www.microsoft.com/design/inclusive/"
+                      >Microsoft: Inclusive Design Toolkit</a
+                    ></small
+                  >
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </ion-card-content>
         </ion-card>
-
       </ion-col>
     </ion-row>
   </ion-grid>

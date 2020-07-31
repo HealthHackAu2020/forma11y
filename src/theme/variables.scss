@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #2870ef;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -274,7 +274,10 @@ ion-menu {
 ion-router-outlet {
   // page area
   ion-content {
-    --ion-background-color: #c6c6c6;
+     --ion-background-color: var(--ion-color-primary);
+    &.bg-image {
+      --background: url(/../../assets/img/sigmund-4MoIpDcSlr4-unsplash.jpg) no-repeat center center / cover;
+    }
   }
 }
 
@@ -282,14 +285,6 @@ ion-card {
   --ion-background-color: #ffffff;
 }
 
-.hidden {
-  display: none; // temporary while we share for testing
-}
-
 ion-item {
   --padding-start: 8px;
-}
-
-ion-card-header {
-  padding: 16px 24px 8px 24px;
 }

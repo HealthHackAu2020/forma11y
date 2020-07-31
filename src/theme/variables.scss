@@ -271,8 +271,7 @@ ion-menu {
   }
 }
 
-body[color-theme="dark"] ion-toolbar.menu-header,
-body[color-theme="light"] ion-toolbar.menu-header {
+ion-toolbar.menu-header {
   --background: var(--ion-color-primary-shade);
   --color:#fff;
 }

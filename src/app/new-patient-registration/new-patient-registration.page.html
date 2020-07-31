@@ -13,130 +13,123 @@
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-grid class="ion-no-padding ion-no-margin">
-      <ion-row class="ion-no-padding ion-no-margin">
-        <ion-col
-          size="12"
-          size-md="8"
-          offset-md="2"
-          class="ion-no-padding ion-no-margin"
-        >
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize"
-                >Section A: Personal details</ion-card-title
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="8" offset-md="2">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >Section A: Personal details</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Title</ion-label
               >
-            </ion-card-header>
-            <ion-card-content>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Title</ion-label
-                >
-                <ion-select
-                  placeholder="Select a title"
-                  [style.font-size.em]="fontSize"
-                  interface="action-sheet"
-                >
-                  <ion-select-option value="Ms">Ms</ion-select-option>
-                  <ion-select-option value="Miss">Miss</ion-select-option>
-                  <ion-select-option value="Mrs">Mrs</ion-select-option>
-                  <ion-select-option value="Mr">Mr</ion-select-option>
-                  <ion-select-option value="Dr">Dr</ion-select-option>
-                  <ion-select-option value="Rev">Rev</ion-select-option>
-                </ion-select>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Surname</ion-label
-                >
-                <ion-input
-                  placeholder="Surname"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Given names</ion-label
-                >
-                <ion-input
-                  placeholder="Given names"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Date of birth</ion-label
-                >
-                <ion-input
-                  placeholder="Date of birth"
-                  type="date"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
+              <ion-select
+                placeholder="Select a title"
+                [style.font-size.em]="fontSize"
+                interface="action-sheet"
+              >
+                <ion-select-option value="Ms">Ms</ion-select-option>
+                <ion-select-option value="Miss">Miss</ion-select-option>
+                <ion-select-option value="Mrs">Mrs</ion-select-option>
+                <ion-select-option value="Mr">Mr</ion-select-option>
+                <ion-select-option value="Dr">Dr</ion-select-option>
+                <ion-select-option value="Rev">Rev</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Surname</ion-label
+              >
+              <ion-input
+                placeholder="Surname"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Given names</ion-label
+              >
+              <ion-input
+                placeholder="Given names"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Date of birth</ion-label
+              >
+              <ion-input
+                placeholder="Date of birth"
+                type="date"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
 
-              <ion-radio-group>
-                <ion-list-header [style.font-size.em]="fontSize"
-                  >Gender</ion-list-header
-                >
-                <ion-grid fixed>
-                  <ion-row>
-                    <ion-col size="6">
-                      <ion-item>
-                        <ion-label [style.font-size.em]="fontSize"
-                          >Male</ion-label
-                        >
-                        <ion-radio slot="end" value="male"></ion-radio>
-                      </ion-item>
-                    </ion-col>
-                    <ion-col size="6">
-                      <ion-item>
-                        <ion-label [style.font-size.em]="fontSize"
-                          >Female</ion-label
-                        >
-                        <ion-radio slot="end" value="female"></ion-radio>
-                      </ion-item>
-                    </ion-col>
-                  </ion-row>
-                  <!-- Add other option and show text box if other option is ticked -->
-                </ion-grid>
-              </ion-radio-group>
+            <ion-radio-group>
+              <ion-list-header [style.font-size.em]="fontSize"
+                >Gender</ion-list-header
+              >
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-item>
+                      <ion-label [style.font-size.em]="fontSize"
+                        >Male</ion-label
+                      >
+                      <ion-radio slot="end" value="male"></ion-radio>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-item>
+                      <ion-label [style.font-size.em]="fontSize"
+                        >Female</ion-label
+                      >
+                      <ion-radio slot="end" value="female"></ion-radio>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <!-- Add other option and show text box if other option is ticked -->
+              </ion-grid>
+            </ion-radio-group>
 
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Marital status</ion-label
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Marital status</ion-label
+              >
+              <ion-select
+                placeholder="Select an option"
+                [style.font-size.em]="fontSize"
+                interface="action-sheet"
+              >
+                <ion-select-option value="Single">Single</ion-select-option>
+                <ion-select-option value="Married">Married</ion-select-option>
+                <ion-select-option value="Defacto">Defacto</ion-select-option>
+                <ion-select-option value="Separated"
+                  >Separated</ion-select-option
                 >
-                <ion-select
-                  placeholder="Select an option"
-                  [style.font-size.em]="fontSize"
-                  interface="action-sheet"
-                >
-                  <ion-select-option value="Single">Single</ion-select-option>
-                  <ion-select-option value="Married">Married</ion-select-option>
-                  <ion-select-option value="Defacto">Defacto</ion-select-option>
-                  <ion-select-option value="Separated"
-                    >Separated</ion-select-option
-                  >
-                  <ion-select-option value="Divorced"
-                    >Divorced</ion-select-option
-                  >
-                  <ion-select-option value="Widowed">Widowed</ion-select-option>
-                </ion-select>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Occupation</ion-label
-                >
-                <ion-input
-                  placeholder="Occupation"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
+                <ion-select-option value="Divorced">Divorced</ion-select-option>
+                <ion-select-option value="Widowed">Widowed</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Occupation</ion-label
+              >
+              <ion-input
+                placeholder="Occupation"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <form [formGroup]="medicareCardForm">
           <ion-card>
             <ion-card-header>
               <ion-card-title [style.font-size.em]="fontSize"
@@ -146,7 +139,7 @@
             <ion-card-content>
               <ion-grid>
                 <ion-row>
-                  <ion-col size="7">
+                  <ion-col size="12" size-md="7">
                     <ion-item>
                       <ion-label
                         position="stacked"
@@ -155,13 +148,20 @@
                         >Card number</ion-label
                       >
                       <ion-input
-                        placeholder="xxxx"
-                        type="number"
+                        placeholder="XXXXXXXXX"
+                        type="text"
+                        pattern="[0-9]*"
+                        maxlength="10"
+                        formControlName="cardNumber"
                         [style.font-size.em]="fontSize"
                       ></ion-input>
                     </ion-item>
+                    <validation-error
+                      [control]="medicareCardForm.controls.cardNumber"
+                      [fieldName]="'Card number'"
+                    ></validation-error>
                   </ion-col>
-                  <ion-col size="5">
+                  <ion-col size="12" size-md="5">
                     <ion-item>
                       <ion-label
                         position="stacked"
@@ -170,11 +170,18 @@
                         >Reference number</ion-label
                       >
                       <ion-input
-                        placeholder="xxxx"
-                        type="number"
+                        placeholder="X"
+                        type="text"
+                        pattern="[0-9]*"
+                        maxlength="2"
+                        formControlName="cardRef"
                         [style.font-size.em]="fontSize"
                       ></ion-input>
                     </ion-item>
+                    <validation-error
+                      [control]="medicareCardForm.controls.cardRef"
+                      [fieldName]="'Reference number'"
+                    ></validation-error>
                   </ion-col>
                   <ion-col size="12">
                     <ion-item>
@@ -183,315 +190,324 @@
                         [style.font-size.em]="fontSize"
                         >Expiry date</ion-label
                       >
-                      <ion-input
-                        placeholder="Expire date"
+                      <ion-datetime
+                        placeholder="Expiry date"
                         type="date"
+                        displayFormat="MM/YYYY"
+                        min="2020"
+                        max="2050"
+                        formControlName="expiryDate"
                         [style.font-size.em]="fontSize"
-                      ></ion-input>
+                      ></ion-datetime>
+                      <!-- TODO :: use better date calcultion for min/max -->
                     </ion-item>
+                    <validation-error
+                      [control]="medicareCardForm.controls.expiryDate"
+                      [fieldName]="'Expiry date'"
+                    ></validation-error>
                   </ion-col>
                 </ion-row>
               </ion-grid>
             </ion-card-content>
           </ion-card>
-
-          <ion-card>
-            <!-- YOU ARE HERE -->
-            <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize"
-                >Pension, Health Care Card, or Veterans Affairs number(if
-                applicable)</ion-card-title
+        </form>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >Pension, Health Care Card, or Veterans Affairs number(if
+              applicable)</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-item>
+                    <ion-label
+                      position="stacked"
+                      [style.font-size.em]="fontSize"
+                      >Card Number</ion-label
+                    >
+                    <ion-input
+                      placeholder="xxxx"
+                      type="text"
+                      [style.font-size.em]="fontSize"
+                    ></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="12">
+                  <ion-item>
+                    <ion-label
+                      position="stacked"
+                      [style.font-size.em]="fontSize"
+                      >Type of Veterans Affairs card</ion-label
+                    >
+                    <ion-input
+                      placeholder=""
+                      type="text"
+                      [style.font-size.em]="fontSize"
+                    ></ion-input>
+                    <!-- TODO :: More research into types of Health / Pension / Veteran Cards -->
+                  </ion-item>
+                </ion-col>
+                <ion-col size="12">
+                  <ion-item>
+                    <ion-label
+                      position="stacked"
+                      [style.font-size.em]="fontSize"
+                      >Expiry date</ion-label
+                    >
+                    <ion-input
+                      placeholder="Expire date"
+                      type="date"
+                      [style.font-size.em]="fontSize"
+                    ></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >Contact Details</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Home Address</ion-label
               >
-            </ion-card-header>
+              <ion-input
+                placeholder="Home Address"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Postcode</ion-label
+              >
+              <ion-input
+                placeholder="Postcode"
+                type="text"
+                pattern="[0-9]*"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Postal Address</ion-label
+              >
+              <ion-input
+                placeholder="Postal Address"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Postcode</ion-label
+              >
+              <ion-input
+                placeholder="Postcode"
+                type="text"
+                pattern="[0-9]*"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Telephone number</ion-label
+              >
+              <ion-input
+                placeholder="Telephone number"
+                type="tel"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Work number</ion-label
+              >
+              <ion-input
+                placeholder="Work number"
+                type="tel"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Mobile number</ion-label
+              >
+              <ion-input
+                placeholder="Mobile number"
+                type="tel"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Email</ion-label
+              >
+              <ion-input
+                placeholder="Email"
+                type="email"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >Next of Kin</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Name
+              </ion-label>
+              <ion-input
+                placeholder="Name"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Relationship to you
+              </ion-label>
+              <ion-input
+                placeholder="Relationship"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Telephone number
+              </ion-label>
+              <ion-input
+                placeholder="Telephone number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Work number
+              </ion-label>
+              <ion-input
+                placeholder="Work number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Mobile number
+              </ion-label>
+              <ion-input
+                placeholder="Mobile number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title [style.font-size.em]="fontSize"
+              >Who can we contact in an emergency?</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Name
+              </ion-label>
+              <ion-input
+                placeholder="Name"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Relationship to you
+              </ion-label>
+              <ion-input
+                placeholder="Relationship"
+                type="text"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Telephone number
+              </ion-label>
+              <ion-input
+                placeholder="Telephone number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Work number
+              </ion-label>
+              <ion-input
+                placeholder="Work number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" [style.font-size.em]="fontSize"
+                >Mobile number
+              </ion-label>
+              <ion-input
+                placeholder="Mobile number"
+                type="number"
+                [style.font-size.em]="fontSize"
+              ></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-radio-group>
+            <ion-list-header [style.font-size.em]="fontSize"
+              >Do you have an advance care directive for end of life care?
+            </ion-list-header>
             <ion-card-content>
               <ion-grid>
                 <ion-row>
-                  <ion-col size="12">
+                  <ion-col size="6">
                     <ion-item>
-                      <ion-label
-                        position="stacked"
-                        [style.font-size.em]="fontSize"
-                        >Card Number</ion-label
-                      >
-                      <ion-input
-                        placeholder="xxxx"
-                        type="text"
-                        [style.font-size.em]="fontSize"
-                      ></ion-input>
+                      <ion-label [style.font-size.em]="fontSize">Yes</ion-label>
+                      <ion-radio slot="end" value="yes" checked></ion-radio>
                     </ion-item>
                   </ion-col>
-                  <ion-col size="12">
+                  <ion-col size="6">
                     <ion-item>
-                      <ion-label
-                        position="stacked"
-                        [style.font-size.em]="fontSize"
-                        >Type of Veterans Affairs card</ion-label
-                      >
-                      <ion-input
-                        placeholder=""
-                        type="text"
-                        [style.font-size.em]="fontSize"
-                      ></ion-input>
-                      <!-- change to ion-select maybe? -->
-                    </ion-item>
-                  </ion-col>
-                  <ion-col size="12">
-                    <ion-item>
-                      <ion-label
-                        position="stacked"
-                        [style.font-size.em]="fontSize"
-                        >Expiry date</ion-label
-                      >
-                      <ion-input
-                        placeholder="Expire date"
-                        type="date"
-                        [style.font-size.em]="fontSize"
-                      ></ion-input>
+                      <ion-label [style.font-size.em]="fontSize">No</ion-label>
+                      <ion-radio slot="end" value="no"></ion-radio>
                     </ion-item>
                   </ion-col>
                 </ion-row>
               </ion-grid>
             </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize"
-                >Contact Details</ion-card-title
-              >
-            </ion-card-header>
-            <ion-card-content>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Home Address</ion-label
-                >
-                <ion-input
-                  placeholder="Home Address"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Postcode</ion-label
-                >
-                <ion-input
-                  placeholder="Postcode"
-                  type="text"
-                  pattern="[0-9]*"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Postal Address</ion-label
-                >
-                <ion-input
-                  placeholder="Postal Address"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Postcode</ion-label
-                >
-                <ion-input
-                  placeholder="Postcode"
-                  type="text"
-                  pattern="[0-9]*"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Telephone number</ion-label
-                >
-                <ion-input
-                  placeholder="Telephone number"
-                  type="tel"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Work number</ion-label
-                >
-                <ion-input
-                  placeholder="Work number"
-                  type="tel"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Mobile number</ion-label
-                >
-                <ion-input
-                  placeholder="Mobile number"
-                  type="tel"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Email</ion-label
-                >
-                <ion-input
-                  placeholder="Email"
-                  type="email"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize"
-                >Next of Kin</ion-card-title
-              >
-            </ion-card-header>
-            <ion-card-content>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Name
-                </ion-label>
-                <ion-input
-                  placeholder="Name"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Relationship to you
-                </ion-label>
-                <ion-input
-                  placeholder="Relationship"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Telephone number
-                </ion-label>
-                <ion-input
-                  placeholder="Telephone number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Work number
-                </ion-label>
-                <ion-input
-                  placeholder="Work number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Mobile number
-                </ion-label>
-                <ion-input
-                  placeholder="Mobile number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title [style.font-size.em]="fontSize"
-                >Who can we contact in an emergency?</ion-card-title
-              >
-            </ion-card-header>
-            <ion-card-content>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Name
-                </ion-label>
-                <ion-input
-                  placeholder="Name"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Relationship to you
-                </ion-label>
-                <ion-input
-                  placeholder="Relationship"
-                  type="text"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Telephone number
-                </ion-label>
-                <ion-input
-                  placeholder="Telephone number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Work number
-                </ion-label>
-                <ion-input
-                  placeholder="Work number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked" [style.font-size.em]="fontSize"
-                  >Mobile number
-                </ion-label>
-                <ion-input
-                  placeholder="Mobile number"
-                  type="number"
-                  [style.font-size.em]="fontSize"
-                ></ion-input>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-radio-group>
-              <ion-list-header [style.font-size.em]="fontSize"
-                >Do you have an advance care directive for end of life care?
-              </ion-list-header>
-              <ion-card-content>
-                <ion-grid>
-                  <ion-row>
-                    <ion-col size="6">
-                      <ion-item>
-                        <ion-label [style.font-size.em]="fontSize"
-                          >Yes</ion-label
-                        >
-                        <ion-radio slot="end" value="yes" checked></ion-radio>
-                      </ion-item>
-                    </ion-col>
-                    <ion-col size="6">
-                      <ion-item>
-                        <ion-label [style.font-size.em]="fontSize"
-                          >No</ion-label
-                        >
-                        <ion-radio slot="end" value="no"></ion-radio>
-                      </ion-item>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </ion-card-content>
-            </ion-radio-group>
-          </ion-card>
-          <!-- 
+          </ion-radio-group>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!-- other sections here -->
+<!-- 
                 <div class="hidden">
                 <ion-title>Section B: Cultural background</ion-title>
 
@@ -851,8 +867,3 @@
             </ion-item>
           </div>
                -->
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
-</ion-content>

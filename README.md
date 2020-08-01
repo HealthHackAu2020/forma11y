@@ -55,16 +55,22 @@ npx ionic repair
 
 ### Project Thoughts
 ## Must have
-- Web forms
-- Form Validation
-- 0 Errors on HTML Codesniffer / pa11y plugin / Netlify a11y plugin
+- Web forms ✅
+- Form Validation ✅
+- 0 Errors on [HTML Codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/)
 
 
 ## Plan
 Use current Ionic Angular to leverage:
-- components;
-- typescript;
-- Future proof for H74 eventually (todo :: add hl7 typescript link here);
+- components ✅
+- typescript ✅
+- Wny Typescript? To future-proof for HL7 FHIR R4 eventually
+  - [HL7 FHIR R4](https://www.hl7.org/fhir/downloads.html)
+  - [npm package](https://github.com/Ahryman40k/typescript-fhir-types)
+  - [Handle FHIR Objects with Typescript](https://medium.com/@ahryman40k/handle-fhir-objects-in-typescript-and-javascript-7110f5a0686f)
+  - [Typescript FHIR R4 Server](https://medium.com/@ahryman40k/typescript-fhir-r4-server-e50f0a9250ca)
+- Automate part of the a11y testing with:
+  - pa11y plugin or Netlify a11y plugin
 
 ## Resources
 - [Notes](https://docs.google.com/document/d/1VDXm7wYrZo-NQRr53VmZmT3MpEQXoVJKYoRbQAu1Iec/edit)

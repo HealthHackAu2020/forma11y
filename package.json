@@ -30,6 +30,7 @@
     "cordova-plugin-qrscanner": "3.0.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
+    "uuid4": "^2.0.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
